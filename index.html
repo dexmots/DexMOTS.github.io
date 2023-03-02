@@ -40,34 +40,34 @@
     <br>
 
     <div class="author">
-        <a href="cs.stanford.edu/~ksrini">Krishnan Srinivasan</a><sup>1</sup>
+        <a href="https://cs.stanford.edu/~ksrini">Krishnan Srinivasan</a><sup>1</sup>
     </div>
     <div class="author">
         <a href="">Eric Heiden</a><sup>2</sup>
     </div>
     <div class="author">
-        <a href="">Ian Ng</a><sup>3</sup>
+        <a href="">Ian Ng</a><sup>1</sup>
     </div>
     <div class="author">
-        <a href="">Jeannette Bohg</a><sup>4</sup>
+        <a href="">Jeannette Bohg</a><sup>1</sup>
     </div>
     <div class="author">
-        <a href="">Animesh Garg</a><sup>1</sup>
+        <a href="">Animesh Garg</a><sup>2,3,4</sup>
     </div>
 
     <br>
     <br>
 
-    <div class="affiliation"><sup>1&nbsp;</sup>Affiliation Number One</div>
-    <div class="affiliation"><sup>2&nbsp;</sup>Affiliation Number Two</div>
-    <div class="affiliation"><sup>3&nbsp;</sup>Affiliation Number Three</div>
-    <div class="affiliation"><sup>4&nbsp;</sup>Affiliation Number Four</div>
+    <div class="affiliation"><sup>1&nbsp;</sup>Stanford University</div>
+    <div class="affiliation"><sup>2&nbsp;</sup>NVIDIA</div>
+    <div class="affiliation"><sup>3&nbsp;</sup>University of Toronto</div>
+    <div class="affiliation"><sup>4&nbsp;</sup>Vector Institute</div>
 
     <br>
     <br>
 
     <div class="links"><a href="">[Paper]</a></div>
-    <div class="links"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">[Video]</a></div>
+    <!-- <div class="links"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">[Video]</a></div> -->
     <div class="links"><a href="https://github.com/jasonyzhang/webpage-template">[Code]</a></div>
 
     <br>
@@ -76,11 +76,7 @@
         <img src="./resources/teaser.png" alt="Teaser figure."/>
         <br>
         <i>
-            This template was originally made for <a href="http://richzhang.github.io/colorization/">
-            Colorful Image Colorization</a>. It was adapted to be mobile responsive for
-            <a href="https://jasonyzhang.com/phosa/">PHOSA</a>. Try resizing this webpage
-            or opening it on your mobile device. The code can be found in
-            <a href="https://github.com/jasonyzhang/webpage-template"> this repo</a>.
+            
         </i>
     </div>
 
@@ -89,7 +85,14 @@
 
     <h1>Abstract</h1>
     <p>
-        This is my abstract.
+        Many objects that humans use on a daily basis involve complex interactions that can be difficult to reproduce with robot manipulators.
+In this work, we represent these interactions using a method to 1) specify object-centric motion trajectories using a sequence of wrenches that are learned, and 2) training an agent to learn to apply these wrenches and track the trajectory in a differentiable simulation environment.
+Current methods for learning task-oriented dexterous manipulation policies requiring a large number of environment interactions resulting in the need to learn in simulation. However, this introduces a separate challenge of bridging the sim-to-real gap. 
+To address the challenge of sample complexity, we propose an object-centric task space which defines a trajectory of poses and wrenches to make policy learning more tractable and robust to perturbations in the dynamics by being conditioned on the underlying forces to apply.
+Our method, DexMOTS, combines this form of task supervision with a differentiable simulator that enables policy gradients to be computed through the environment dynamics model.
+We develop a set of dexterous manipulation tasks controlling articulated objects with joints of varying degrees of stiffness to highlight the benefits of our task space and learning algorithm compared to other model-free and model-based methods.
+Then, we demonstrate how object-centric motion trajectories can be leveraged to learn dexterous motion policies for hands of different morphologies.
+Lastly, we empirically validate the benefits of our method over a set of model-based and model-free RL baselines.
     </p>
 
     <br><br><hr>
@@ -102,23 +105,23 @@
         </a>
     </div>
     <div class="paper-info">
-        <h4>Creative and Descriptive Paper Title</h4>
+        <h4>Learning Contact-Rich Dexterous Manipulation in \\an Object-Centric Task Space with Differentiable Simulation</h4>
         <h5>
-            First Author, Second Author, Third Author, Fourth Author, and Fifth Author
+            Krishnan Srinivasan, Eric Heiden, Ian Ng, Jeannette Bohg, and Animesh Garg
         </h5>
-        <pre><code>@InProceedings{author20XXtitle,
-    title = {Creative and Descriptive Paper Title},
-    author = {Author, First and Author, Second and Author, Third and Author, Fourth and Author, Fifth},
-    booktitle = {Conference},
-    year = {20XX},
+        <pre><code>@InProceedings{srinivasan2023dexmots,
+    title = {DexMOTS: Learning Contact-Rich Dexterous Manipulation in \\an Object-Centric Task Space with Differentiable Simulation},
+    author = {Srinivasan, Krishnan and Heiden, Eric and Ng, Ian and Bohg, Jeannette and Garg, Animesh},
+    booktitle = {In submission},
+    year = {2023},
 }</code></pre>
     </div>
 
-    <br><br><hr><br>
+    <!-- <br><br><hr><br>
 
     <h1>Video</h1>
 
-    <!-- <div class="video-container">
+    <div class="video-container">
         <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameBorder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
@@ -132,7 +135,7 @@
              alt="Model overview figure"/>
     </a>
     <br>
-    <a class="links" href="https://github.com/jasonyzhang/diff_manip">[GitHub]</a>
+    <!-- <a class="links" href="https://github.com/jasonyzhang/diff_manip">[GitHub]</a> -->
 
     <br><br><hr>
     <h1>Acknowledgements</h1>
