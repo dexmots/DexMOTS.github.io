@@ -10,8 +10,8 @@
     <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/
         if you update and want to force Facebook to re-scrape. -->
 	<meta property="og:image" content="Path to my teaser.png"/>
-	<meta property="og:title" content="Creative and Descriptive Paper Title." />
-	<meta property="og:description" content="Paper description." />
+	<meta property="og:title" content="DexMOTS" />
+	<meta property="og:description" content="Learning Contact-Rich Dexterous Manipulation in an Object-Centric Task Space with Differentiable Simulation" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Add your Google Analytics tag here -->
@@ -85,14 +85,13 @@
 
     <h1>Abstract</h1>
     <p>
-        Many objects that humans use on a daily basis involve complex interactions that can be difficult to reproduce with robot manipulators.
-In this work, we represent these interactions using a method to 1) specify object-centric motion trajectories using a sequence of wrenches that are learned, and 2) training an agent to learn to apply these wrenches and track the trajectory in a differentiable simulation environment.
-Current methods for learning task-oriented dexterous manipulation policies requiring a large number of environment interactions resulting in the need to learn in simulation. However, this introduces a separate challenge of bridging the sim-to-real gap. 
-To address the challenge of sample complexity, we propose an object-centric task space which defines a trajectory of poses and wrenches to make policy learning more tractable and robust to perturbations in the dynamics by being conditioned on the underlying forces to apply.
-Our method, DexMOTS, combines this form of task supervision with a differentiable simulator that enables policy gradients to be computed through the environment dynamics model.
-We develop a set of dexterous manipulation tasks controlling articulated objects with joints of varying degrees of stiffness to highlight the benefits of our task space and learning algorithm compared to other model-free and model-based methods.
-Then, we demonstrate how object-centric motion trajectories can be leveraged to learn dexterous motion policies for hands of different morphologies.
-Lastly, we empirically validate the benefits of our method over a set of model-based and model-free RL baselines.
+        Many everyday objects require the use of complex interactions that are challenging with robot manipulators, especially for contact-rich behaviors such as rotating a cap.  
+We present a method where object object-centric motion trajectories are defined by a sequence of wrenches, enabling the agent these interactions efficiently in differentiable simulation environments.
+Our approach, DexMOTS, integrates task-specific information with a differentiable simulator to provide policy gradients which backpropagate through an environment dynamics model to efficiently learn a goal-conditioned controller.
+Concretely, the trajectory of object pose and wrench requirements gives the necessary information to handle varying friction or damping forces, such as in the case of a tightening screw cap, or when pushing against a spring-loaded lever.
+We develop a set of dexterous manipulation tasks controlling operable objects with joints of varying stiffnesses, shapes, and functional task requirements to highlight the benefits of our approach. % model-free and model-based methods.
+Then, we demonstrate how object-centric motion trajectories can be leveraged to learn dexterous motion policies for different hand morphologies.
+We empirically validate our method against a set of model-based and model-free RL baselines, and show that it achieves up to 40\% higher success rates on a suite of realistic contact-rich manipulation tasks.
     </p>
 
     <br><br><hr>
