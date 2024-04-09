@@ -49,7 +49,7 @@ body {
     position: relative;
     overflow: hidden;
     width: 80%;
-    padding-top: 45%; /* Formula for 16:9 Aspect Ratio: width * 9 / 16 */
+    /* padding-top: 45%; /* Formula for 16:9 Aspect Ratio: width * 9 / 16 */ */
 }
 
 .video-container iframe {
